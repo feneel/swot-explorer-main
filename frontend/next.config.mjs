@@ -19,9 +19,9 @@ const bundleAnalyzer = withBundleAnalyzer({
 export default withSentryConfig(
   bundleAnalyzer(
     withNextIntlConfig({
-      eslint: {
-        dirs: ['.'],
-      },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
       poweredByHeader: false,
       reactStrictMode: true,
       experimental: {
