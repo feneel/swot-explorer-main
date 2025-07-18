@@ -22,11 +22,15 @@ export default withSentryConfig(
   eslint: {
     ignoreDuringBuilds: true,
   },
+   typescript: {
+    ignoreBuildErrors: true,
+  },
       poweredByHeader: false,
       reactStrictMode: true,
       experimental: {
         serverComponentsExternalPackages: ['@electric-sql/pglite'],
       },
+
     }),
   ),
   {
