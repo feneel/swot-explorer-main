@@ -15,7 +15,8 @@ export async function GET() {
 export async function POST(req: Request) {
   const { segment } = await req.json();
 
-  const response = await fetch("http://localhost:8000/analyze", {
+  
+  const response = await fetch(`${process.env.BACKEND_API_URL}/analyze`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
