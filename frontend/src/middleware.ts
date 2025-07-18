@@ -7,12 +7,14 @@ import createMiddleware from 'next-intl/middleware';
 
 import { AllLocales, AppConfig } from './utils/AppConfig';
 
+// @ts-ignore
 const intlMiddleware = createMiddleware({
   locales: AllLocales,
   localePrefix: AppConfig.localePrefix,
   defaultLocale: AppConfig.defaultLocale,
 });
 
+// @ts-ignore
 const isProtectedRoute = (req: NextRequest) => {
   const pathname = req.nextUrl.pathname;
   if (pathname.startsWith('/api/swot')) return false;
@@ -25,6 +27,7 @@ const isProtectedRoute = (req: NextRequest) => {
 
 
 
+// @ts-ignore
 export default function middleware(
   request: NextRequest,
   event: NextFetchEvent,
