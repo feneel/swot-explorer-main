@@ -14,7 +14,7 @@ export const promptTemplates = {
   BuyerPersona: (segment: string) =>
     `Write a sample persona for a typical ${segment} customer.`,
   StrategicValue: (segment: string) =>
-    `Why is this segment strategically valuable from a growth/investment perspective?`,
+    `Why is this ${segment} strategically valuable from a growth/investment perspective?`,
   Channels: (segment: string) =>
     `How should we reach and activate the ${segment}?`,
 };
